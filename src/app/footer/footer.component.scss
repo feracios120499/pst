@@ -1,0 +1,67 @@
+@import "../../colors.scss";
+#contact{
+    padding-bottom: 124px;
+}
+.contact {
+    
+    &-title {
+      color: $black;
+      padding-top: 124px;
+      @media (max-width: 812px) {
+        text-align: center;
+      }
+    }
+    &-map {
+      margin-top: 33px;
+      width: 100%;
+      height: 300px;
+    }
+    &-items {
+      margin-top: 20px;
+      display: flex;
+      @media (max-width: 812px) {
+        flex-direction: column;
+      }
+    }
+    &-item {
+      width: 33.3%;
+      height: 200px;
+      background: #faf9f9;
+      border-radius: 4px;
+      padding: 38px 0;
+      margin-left: 20px;
+      &:first-child {
+        margin-left: 0;
+      }
+      @media (max-width: 812px) {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px;
+      }
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-name {
+      margin-top: 20px;
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 160%;
+      text-align: center;
+      color: $black;
+    }
+    &-value {
+      margin-top: 10px;
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 160%;
+      text-align: center;
+      color: $black;
+    }
+  }

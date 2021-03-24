@@ -1,0 +1,280 @@
+@import "../../styles.scss";
+#teachers {
+    margin-top: 164px;
+}
+
+.teachers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 75px;
+    &-header {
+        margin-top: 82px;
+    }
+    &-title {
+        margin-bottom: 27px;
+    }
+
+    &-subtitles {
+        margin-top: 33px;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 160%;
+        color: $black;
+        display: flex;
+        @media (max-width: 812px) {
+            flex-direction: column;
+        }
+        &-item {
+            max-width: 365px;
+        }
+        &-item:first-child {
+            margin-right: 20px;
+            @media (max-width: 812px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &-teacher {
+        cursor: pointer;
+        transition: all 0.2s;
+        padding: 15px;
+        &-image {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            & img {
+                position: absolute;
+                z-index: 10;
+                width: 100%;
+                height: 100%;
+                top: -8px;
+                left: -8px;
+                transition: all 0.2s;
+            }
+        }
+        &-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 8px;
+            left: 8px;
+            background-color: $yellow;
+            z-index: 2;
+            opacity: 0.2;
+            transition: all 0.2s;
+        }
+        &-name {
+            margin-top: 25px;
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 160%;
+            color: $black;
+        }
+        &-firstName {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 160%;
+        }
+        &:hover {
+            .teachers-teacher-background,
+            .teachers-teacher-image img {
+                top: 0;
+                left: 0;
+            }
+            background-color: #faf9f9;
+        }
+    }
+}
+
+.teacher {
+    /* The Modal (background) */
+    &-modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        z-index: 250;
+        &-header {
+            background: #f7f7f7 !important;
+            height: 80px !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding: 0 42px !important;
+            position: fixed;
+            width: 100%;
+            max-width: 1000px;
+            z-index: 10000;
+        }
+        &-close {
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover {
+                color: $yellow;
+            }
+        }
+        &-name {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 160%;
+            color: $black;
+        }
+        &-firstName {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 160%;
+            color: $black;
+        }
+    }
+
+    /* Modal Content */
+    &-modal-content {
+        background-color: $white;
+        margin: auto;
+        padding: 20px;
+        width: 75% !important;
+        position: absolute !important;
+        overflow-y: auto !important;
+        right: 0;
+        min-height: 100vh;
+        max-width: 1000px;
+        padding: 0 !important;
+        background: #ffffff;
+        @media (max-width: 812px) {
+            width: 100% !important;
+        }
+    }
+    &-modal-general {
+        height: 320px;
+        width: 100%;
+        margin-top: 80px;
+        background-color: #edeeef;
+        position: relative;
+        &-content {
+            padding-left: 400px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            &-firstName {
+                font-family: Ubuntu;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 42px;
+                line-height: 160%;
+            }
+            &-name {
+                font-family: Ubuntu;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 26px;
+                line-height: 160%;
+            }
+        }
+    }
+    &-modal-image {
+        width: 320px;
+        height: 320px;
+        position: absolute;
+        top: 27px;
+        left: 27px;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 100;
+        }
+        &-background {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            width: 100%;
+            height: 100%;
+            background-color: $black;
+            z-index: 90;
+        }
+    }
+    &-detail {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        padding: 27px;
+        @media (max-width: 812px) {
+            flex-direction: column;
+        }
+        &:first-child {
+            margin-top: 100px;
+        }
+        &-title {
+            width: 20%;
+            color: #232932;
+            opacity: 0.6;
+            @media (max-width: 812px) {
+                margin-bottom: 20px;
+                align-self: center;
+                width: 50%;
+                text-align: center;
+            }
+        }
+        &-text {
+            width: 70%;
+            @media (max-width: 812px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.openModal .teachers-title {
+    transition: color 450ms ease-out;
+    color: $white;
+}
+.openModal .teachers-subtitles {
+    transition: color 450ms ease-out;
+    color: $white;
+}
+
+.openModal .teachers-teacher-background {
+    display: none;
+}
+.openModal .teachers-teacher-name {
+    transition: color 450ms ease-out;
+    color: $white;
+}
+
+.openModal .teachers-teacher-image img {
+    transition: all 450ms ease-out;
+    -webkit-filter: grayscale(99%);
+    filter: grayscale(99%);
+}
+
+.laureats {
+    margin-top: 75px;
+    border: 1px solid $yellow;
+    &-title{
+        margin-top: 16px;
+        text-align: center;
+    }
+}
+.laureats .teachers{
+    margin-top: 20px;
+}

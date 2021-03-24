@@ -1,0 +1,101 @@
+<app-header></app-header>
+<section id="student">
+    <div class="container">
+        <div class="student-title title">
+            Спеціальність 121 «Інженерія програмного забезпечення»
+        </div>
+        <div class="student-subtitle">
+            Спеціальність дає можливість отримати одну з найбільш престижних професій IT-програміста, фахівці якої на
+            сьогоднішній день є високооплачуваними і вкрай затребуваними
+        </div>
+    </div>
+</section>
+<section id="spec">
+    <div class="">
+        <div class="spec">
+            <div class="spec-image" (click)="openModal(0)">
+                <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F1.png?alt=media&token=ec05ea6d-8dd3-4364-a2e7-bcbb412d63d9" alt="1" class="gray">
+                <div class="spec-title">Програмно-інформаційні системи</div>
+                <div class="spec-text">Дізнатись більше</div>
+            </div>
+            <div class="spec-image" (click)="openModal(1)">
+                <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F2.png?alt=media&token=1d542dc0-53aa-4289-9e9d-6750aa3e94d1" alt="1"  class="gray">
+                <div class="spec-title">Теорія інформаційних систем</div>
+                <div class="spec-text">Дізнатись більше</div>
+            </div>
+            <div class="spec-image" (click)="openModal(2)">
+                <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F3.png?alt=media&token=4db780d1-5c63-4dcc-ae37-37bddf2958ca" alt="1"  class="gray">
+                <div class="spec-title">Програмування вбудованих і мобільних систем (ВМС)</div>
+                <div class="spec-text">Дізнатись більше</div>
+            </div>
+            <div class="spec-image" (click)="openModal(3)">
+                <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F4.png?alt=media&token=4f4ba992-a02b-4632-a7aa-24ba32c254c0" alt="1"  class="gray">
+                <div class="spec-title">Програмування комп`ютерних ігор</div>
+                <div class="spec-text">Дізнатись більше</div>
+            </div>
+            <div class="spec-image" (click)="openModal(4)">
+                <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F5.png?alt=media&token=38e18243-5b1c-4859-b2e5-9de64d0829b4" alt="1"  class="gray">
+                <div class="spec-title">ERP програмування</div>
+                <div class="spec-text">Дізнатись більше</div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div add-class="noscroll" to="body" id="backalavrModal" class="modal-modal simplebar-content-wrapper"
+    [class.show]="isShowModal" *ngIf="isShowModal">
+    <div class="modal-modal-content">
+        <div class="modal-modal-header">
+            <div class="modal-modal-name">
+                <div class="modal-modal-title">
+                    Спеціалізація
+                </div>
+                {{currentSpec.title}}
+            </div>
+            <div class="modal-modal-close" (click)="closeModal()">
+                Закрити
+                <i-feather name="x"></i-feather>
+            </div>
+        </div>
+        <div class="modal-modal-general">
+            <div class="modal-modal-image">
+                <img [src]="currentSpec.image" style="object-fit: cover;">
+            </div>
+            <div class="modal-modal-general-content">
+                <div class="modal-modal-general-content-subtitle">
+                    <div class="modal-modal-general-content-title">Спеціалізація</div>
+                    {{currentSpec.title}}
+                </div>
+            </div>
+        </div>
+        <div class="modal-modal-body">
+            <div class="modal-list">
+                <div class="modal-list_title">
+                    Студенти отримають знання з
+                </div>
+                <div class="modal-list_item" *ngFor="let item of currentSpec.knowledge">{{item}}</div>
+            </div>
+            <div class="modal-list">
+                <div class="modal-list_title">Це дозволить</div>
+                <div class="modal-list_item" *ngFor="let item of currentSpec.allow">{{item}}</div>
+            </div>
+            <div class="modal-list">
+                <div class="modal-list_title">
+                    Що треба знати
+                </div>
+                <div class="modal-list_item" *ngFor="let item of currentSpec.know">{{item}}</div>
+
+            </div>
+            <div class="modal-list">
+                <div class="modal-list_title">
+                    Дисципліни, які треба вивчити
+                </div>
+                <div class="modal-list_item" *ngFor="let item of currentSpec.subjects">{{item}}</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

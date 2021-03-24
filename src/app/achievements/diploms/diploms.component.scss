@@ -1,0 +1,17 @@
+#diploms{
+    margin-top:161px;
+}
+.diploms{
+    max-height: 350px;
+    &-title{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+}
+
+.swiper-slide{
+    @media (max-width:812px) {
+        width: 100%!important;
+    }
+}

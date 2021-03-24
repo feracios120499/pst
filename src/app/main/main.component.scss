@@ -1,0 +1,833 @@
+
+@import "../../colors.scss";
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.white {
+  color: $white;
+}
+.yellow {
+  color: $yellow;
+}
+section {
+  padding-bottom: 124px;
+}
+.header {
+  margin-top: 80px;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  background-color: $black;
+  &-left {
+    background-color: $black;
+    width: 60%;
+  }
+  &-right {
+    background-color: $yellow;
+    width: 40%;
+    max-width: 510px;
+  }
+  height: calc(100vh - 80px);
+  @media (min-width: 812px) {
+    min-height: 100%;
+  }
+  &-image {
+    background-image: url(https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fhome_header.png?alt=media&token=8a7da618-5b01-43d6-b47b-8a7ef6057195);
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: calc(8.821233411397346% + 400px);
+    width: 51%;
+    height: 79.5%;
+    top: 6.7%;
+    @media (max-width: 812px) {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+    transform: translateX(100px);
+    transition: all 0.5s;
+    opacity: 0;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  &-content {
+  }
+  &-title {
+    position: absolute;
+    width: 499px;
+    height: 170px;
+    left: 8.821233411397346%;
+    top: 19.69230769230769%;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 84px;
+    line-height: 84px;
+    color: $yellow;
+    text-align: left;
+    z-index: 100;
+    @media (max-width: 812px) {
+      display: none;
+    }
+    transform: translateX(-100px);
+    transition: all 0.5s;
+    opacity: 0;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  &-about {
+    position: absolute;
+    height: 48px;
+    left: 8.821233411397346%;
+    top: calc(6% + 57.67%);
+    color: #fff;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.6s;
+    z-index: 101;
+    @media (max-width: 812px) {
+      display: none;
+    }
+    &-text {
+      margin-left: 29px;
+    }
+    &-icon {
+      width: 57px;
+      height: 58px;
+      transition: transform 0.6s;
+    }
+    &:hover {
+      cursor: pointer;
+      color: $yellow;
+    }
+    &:hover &-icon {
+      transform: translateY(20px);
+    }
+    opacity: 0.6;
+    transform: translateY(100px);
+    transition: all 1s;
+    opacity: 0;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  &-more {
+    position: absolute;
+    width: 141px;
+    height: 18px;
+    right: 522px;
+    top: 225px;
+
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    color: $white;
+  }
+  &-prior {
+    position: absolute;
+    width: 125px;
+    height: 36px;
+    right: 10.59001512859304%;
+    top: 23.93822393822394%;
+
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    color: $white;
+    opacity: 0.8;
+    @media (max-width: 812px) {
+      display: none;
+    }
+    &-our {
+      color: $yellow;
+      transform: translateY(100px);
+      transition: all 1s;
+      opacity: 0;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+    &-your {
+      transform: translateY(100px);
+      transition: all 1s;
+      opacity: 0;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+  }
+  &-bank {
+    position: absolute;
+    width: 557px;
+    height: 50px;
+    right: 10.59001512859304%;
+    top: 73.16602316602317%;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: right;
+    color: $white;
+    opacity: 0.8;
+    @media (max-width: 812px) {
+      display: none;
+    }
+    opacity: 0.6;
+    transform: translateY(100px);
+    transition: all 1s;
+    opacity: 0;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  &-mobile {
+    display: none;
+    @media (max-width: 812px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px 6%;
+      height: 100%;
+    }
+  }
+  &-mobilePrior {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: left;
+    color: $yellow;
+    opacity: 0.8;
+  }
+  &-mobileTitle {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    color: $yellow;
+    text-align: left;
+    font-size: 51px;
+    line-height: 51px;
+  }
+  &-mobileBank {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: left;
+    color: $white;
+    opacity: 0.8;
+    width: 300px;
+    margin-top: 10px;
+  }
+  &-mobileAbout {
+    height: 48px;
+    color: #fff;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    transition: color 0.6s;
+    &-text {
+      margin-left: 29px;
+    }
+    &-icon {
+      width: 57px;
+      height: 58px;
+      transition: transform 0.6s;
+    }
+    &:hover {
+      cursor: pointer;
+      color: $yellow;
+    }
+    &:hover &-icon {
+      transform: translateY(20px);
+    }
+  }
+}
+
+
+
+
+.news {
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 124px;
+    @media (max-width: 812px) {
+      flex-direction: column;
+    }
+  }
+  &-all {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $black;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.6s;
+    &:hover {
+      color: $yellow;
+    }
+    &:hover &-icon {
+      transform: translateX(10px);
+    }
+    &-text {
+    }
+    &-icon {
+      transition: transform 0.6s;
+      margin-left: 21px;
+      width: 21px;
+      height: 21px;
+    }
+  }
+  &-title {
+    color: $black;
+  }
+  &-content {
+    margin-top: 34px;
+  }
+  &-new {
+    @media (max-width: 812px) {
+      margin-top: 40px;
+    }
+    &-image {
+      overflow: hidden;
+
+      & > img {
+        width: 100%;
+        transition: all 0.7s;
+        filter: brightness(0.75);
+      }
+    }
+    &-subject {
+      margin-top: 23px;
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: $black;
+      opacity: 0.6;
+      transition: all 0.7s;
+    }
+    &-title {
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: $black;
+      transition: all 0.7s;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover &-image > img {
+      transform: scale(1.05);
+      filter: brightness(1);
+    }
+    &:hover &-subject,
+    &:hover &-title {
+      transform: translateY(-5px);
+    }
+  }
+}
+html,
+body {
+  overflow-x: hidden;
+}
+.button {
+  background: $yellow;
+  border-radius: 8px;
+  width: 180px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+}
+.prior {
+  display: flex;
+  background-color: $black;
+  color: $white;
+  height: 715px;
+  @media (max-width: 812px) {
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
+  &-left {
+    width: 58%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow;
+    @media (max-width: 812px) {
+      width: 100%;
+      height: 70%;
+      & > img {
+        width: 350px;
+        margin: 25px 0;
+      }
+    }
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 812px) {
+      height: 30%;
+    }
+  }
+  &-text {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 65px;
+    text-align: right;
+    width: 475px;
+    text-transform: uppercase;
+    @media (max-width: 812px) {
+      width: 100%;
+      padding: 15px;
+      font-size: 22px;
+      line-height: 35px;
+      text-align: center;
+    }
+  }
+}
+
+.about {
+  color: $black;
+  &-title {
+    @media (max-width: 812px) {
+      text-align: center;
+    }
+  }
+  &-text {
+    margin-top: 33px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    @media (max-width: 812px) {
+      text-align: center;
+    }
+  }
+  &-button {
+    margin-top: 41px;
+    @media (max-width: 812px) {
+      margin: 41px auto 0 auto;
+    }
+  }
+}
+
+.learn {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  background-position: center;
+  background-image: url(https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Flearn.png?alt=media&token=a515ce49-13ba-4009-9ec3-b893ec34cb69);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: 812px) {
+    background-attachment: initial;
+  }
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 812px) {
+      flex-direction: column;
+    }
+  }
+  &-title {
+    width: 293px;
+    color: $yellow;
+    @media (max-width: 812px) {
+      width: 100%;
+      text-align: center;
+      padding-top: 124px;
+    }
+  }
+  &-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    @media (max-width: 812px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &-item {
+    width: 40%;
+    margin-bottom: 50px;
+    @media (max-width: 812px) {
+      width: 90%;
+      &:first-child {
+        margin-top: 50px;
+      }
+    }
+  }
+  &-number {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    color: $yellow;
+    opacity: 0.6;
+    @media (max-width: 812px) {
+      text-align: center;
+    }
+  }
+  &-value {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    color: $white;
+    margin-top: 21px;
+    max-width: 244px;
+    @media (max-width: 812px) {
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+}
+
+.abit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &-title {
+    color: $black;
+    @media (max-width: 812px) {
+      text-align: center;
+    }
+  }
+  &-text {
+    margin-top: 33px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    color: $black;
+    max-width: 608px;
+    @media (max-width: 812px) {
+      text-align: center;
+    }
+  }
+  &-image {
+    position: absolute;
+    right: 0px;
+    @media (max-width: 812px) {
+      display: none;
+    }
+  }
+}
+
+.why {
+  background-color: $black;
+  height: 731px;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 812px) {
+    height: auto;
+  }
+  &-ellipse1 {
+    position: absolute;
+    background: #202020;
+    opacity: 0.2;
+    border-radius: 50%;
+    top: -70%;
+    height: 100%;
+    width: 106%;
+    transform: translateX(-50%);
+    left: 50%;
+    @media (max-width: 812px) {
+      display: none;
+    }
+  }
+  &-ellipse2 {
+    position: absolute;
+    background: #202020;
+    opacity: 0.2;
+    border-radius: 50%;
+    top: -50%;
+    height: 100%;
+    width: 120%;
+    transform: translateX(-50%);
+    left: 50%;
+    @media (max-width: 812px) {
+      display: none;
+    }
+  }
+  &-title {
+    color: $white;
+    text-align: center;
+    padding-top: 124px;
+  }
+  &-items {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 812px) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &-item {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+    @media (max-width: 812px) {
+      width: 70%;
+    }
+  }
+  &-text {
+    max-width: 270px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    margin-top: 21px;
+    text-align: center;
+    color: $white;
+  }
+}
+
+.questions {
+  display: flex;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url(https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fquestions.png?alt=media&token=9f8cbb47-1fc9-4dc4-9c9c-3785f70aaaa9);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 607px;
+  @media (max-width: 812px) {
+    background-attachment: initial;
+  }
+  &-content {
+    padding-left: 93px;
+    background-color: $white;
+    width: 695px;
+    height: 465px;
+    @media (max-width: 812px) {
+      height: auto;
+      padding-left: 0;
+      padding-bottom: 53px;
+      width: 100%;
+    }
+  }
+  &-title {
+    color: $black;
+    padding-top: 53px;
+    @media (max-width: 812px) {
+      text-align: center;
+    }
+  }
+  &-items {
+    margin-top: 33px;
+    @media (max-width: 812px) {
+      padding-left: 53px;
+    }
+  }
+  &-item {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    color: $black;
+    opacity: 0.5;
+    margin-top: 16px;
+    max-width: 524px;
+    cursor: pointer;
+    transition: all 0.7s;
+    &:hover {
+      opacity: 1;
+    }
+    &:hover .questions-more {
+      opacity: 1;
+    }
+    &:first-child {
+      margin-top: 0px;
+    }
+    @media (max-width: 812px) {
+      opacity: 1;
+    }
+  }
+  &-button {
+    margin-top: 33px;
+    @media (max-width: 812px) {
+      margin: 33px auto 0 auto;
+    }
+  }
+  &-more {
+    opacity: 0;
+    color: $yellow;
+    margin-left: 14px;
+    transition: all 0.7s;
+    @media (max-width: 812px) {
+      opacity: 1;
+      margin-left: 5px;
+    }
+  }
+}
+
+.partners {
+  background-color: $white;
+  &-title {
+    color: $black;
+    padding-top: 124px;
+    text-align: center;
+  }
+  &-items {
+    margin-top: 33px;
+  }
+  &-item {
+    @media (max-width: 812px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+    -webkit-filter: grayscale(99%);
+    filter: grayscale(99%);
+
+    &:hover {
+      transition: filter 0.7s ease-in-out;
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+  }
+}
+
+.contact {
+  &-title {
+    color: $black;
+    padding-top: 124px;
+    @media (max-width: 812px) {
+      text-align: center;
+    }
+  }
+  &-map {
+    margin-top: 33px;
+    width: 100%;
+    height: 300px;
+  }
+  &-items {
+    margin-top: 20px;
+    display: flex;
+    @media (max-width: 812px) {
+      flex-direction: column;
+    }
+  }
+  &-item {
+    width: 33.3%;
+    height: 200px;
+    background: #faf9f9;
+    border-radius: 4px;
+    padding: 38px 0;
+    margin-left: 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+    @media (max-width: 812px) {
+      width: 100%;
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+  }
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-name {
+    margin-top: 20px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+    color: $black;
+  }
+  &-value {
+    margin-top: 10px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+    color: $black;
+  }
+}
+
+
+
+

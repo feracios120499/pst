@@ -1,0 +1,124 @@
+<app-header></app-header>
+<section id="documents">
+    <div class="container">
+        <div class="documents">
+            <div class="documents-left">
+                <div class="documents-title title">
+                    ДОКУМЕНТИ КАФЕДРИ
+                </div>
+                <div class="documents-subtitle">
+                    Електронні документи кафедри для студентів
+                </div>
+            </div>
+            <div class="documents-right">
+                <div class="documents-backalvr" (click)="showModal('backalavrModal')">
+                    <div class="documents-backalvr-image">
+                        <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fbackalavr.png?alt=media&token=b23563df-6618-4995-93e5-aee1c947978c">
+                        <div class="documents-backalvr-title">Документи для бакалаврів</div>
+                        <div class="documents-backalvr-text">Дізнатись більше</div>
+                    </div>
+
+                </div>
+                <div class="documents-magistr" (click)="showModal('magistrModal')">
+                    <div class="documents-magistr-image">
+                        <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fmaster.png?alt=media&token=2ae36a90-ce82-4fd3-aeb6-f779275d8466">
+                        <div class="documents-magistr-title">Документи для магістрів</div>
+                        <div class="documents-magistr-text">Дізнатись більше</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div add-class="noscroll" to="body" id="backalavrModal" class="modal-modal simplebar-content-wrapper"
+    [class.show]="currentModal == 'backalavrModal'" *ngIf="currentModal == 'backalavrModal'">
+    <div class="modal-modal-content">
+        <div class="modal-modal-header">
+            <div class="modal-modal-name">
+                <div class="modal-modal-title">
+                    Документи
+                </div>
+                Бакалаврат
+            </div>
+            <div class="modal-modal-close" (click)="closeModal()">
+                Закрити
+                <i-feather name="x"></i-feather>
+            </div>
+        </div>
+        <div class="modal-modal-general">
+            <div class="modal-modal-image">
+                <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fbackalavr.png?alt=media&token=b23563df-6618-4995-93e5-aee1c947978c" style="object-fit: cover;">
+            </div>
+            <div class="modal-modal-general-content">
+                <div class="modal-modal-general-content-subtitle">
+                    <div class="modal-modal-general-content-title">Документи</div>
+                    Бакалаврат
+                </div>
+            </div>
+        </div>
+        <div class="modal-modal-body">
+            <div class="modal-documents" *ngIf="backalavrDocuments && backalavrDocuments.length!=0">
+                <div class="modal-documents_item" *ngFor="let document of backalavrDocuments">
+                    <div class="modal-documents_name">{{document.FileName}}</div>
+                    <div class="modal-documents_actions">
+                        <div class="button" (click)="downloadDocument(document)">
+                            <i-feather name="download"></i-feather>
+                            Завантажити
+                        </div>
+                        <a class="button-border" (click)="view(document)" target="_blank">
+                            <i-feather name="eye"></i-feather>
+                            Продивитись
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div add-class="noscroll" to="body" id="magistrModal" class="modal-modal simplebar-content-wrapper"
+    [class.show]="currentModal == 'magistrModal'" *ngIf="currentModal == 'magistrModal'">
+    <div class="modal-modal-content">
+        <div class="modal-modal-header">
+            <div class="modal-modal-name">
+                <div class="modal-modal-title">
+                    Документи
+                </div>
+                Магістратура
+            </div>
+            <div class="modal-modal-close" (click)="closeModal()">
+                Закрити
+                <i-feather name="x"></i-feather>
+            </div>
+        </div>
+        <div class="modal-modal-general">
+            <div class="modal-modal-image">
+                <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fmaster.png?alt=media&token=2ae36a90-ce82-4fd3-aeb6-f779275d8466" style="object-fit: cover;">
+            </div>
+            <div class="modal-modal-general-content">
+                <div class="modal-modal-general-content-subtitle">
+                    <div class="modal-modal-general-content-title">Документи</div>
+                    Магістратура
+                </div>
+            </div>
+        </div>
+        <div class="modal-modal-body">
+            <div class="modal-documents" *ngIf="magistrDocuments && magistrDocuments.length!=0">
+                <div class="modal-documents_item" *ngFor="let document of magistrDocuments">
+                    <div class="modal-documents_name">{{document.FileName}}</div>
+                    <div class="modal-documents_actions">
+                        <div class="button" (click)="downloadDocument(document)">
+                            <i-feather name="download"></i-feather>
+                            Завантажити
+                        </div>
+                        <a class="button-border" (click)="view(document)" target="_blank">
+                            <i-feather name="eye"></i-feather>
+                            Продивитись
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

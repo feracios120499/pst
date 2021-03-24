@@ -56,8 +56,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 }
               ]
             }
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pst"
+    }
+  },
+  "defaultProject": "pst",
+  "cli": {
+    "analytics": "55642f13-4ac8-4e85-aa08-4693551c470e"
+  }
 }

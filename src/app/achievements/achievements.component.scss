@@ -1,0 +1,160 @@
+@import "../../colors.scss";
+
+#awards {
+    margin-top: 164px;
+}
+.awards {
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-title {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 42px;
+        line-height: 160%;
+        max-width: 456px;
+    }
+    &-subtitle {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 160%;
+        &_item {
+            margin-top: 16px;
+        }
+    }
+    &-image {
+        height: 100%;
+    }
+}
+
+#study {
+    margin-top: 218px;
+}
+
+.studies {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &-title {
+        margin-bottom: 48px;
+        text-align: center;
+    }
+    &-item {
+        width: 350px;
+        height: 208px;
+        background-color: rgba(35, 41, 50, 0.04);
+        border-radius: 8px;
+        margin-bottom: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        @media (max-width:812px) {
+            margin-bottom: 32px;
+        }
+        &_icon {
+            margin-top: 30px;
+        }
+        &_title {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+            margin-top: 24px;
+        }
+        &_text {
+            text-align: center;
+            margin-top: 8px;
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+}
+
+#projects {
+    margin-top: 156px;
+}
+.projects {
+    width: 100%;
+    background-color: $black;
+    color: $white;
+    &-title {
+        margin-top: 64px;
+        margin-bottom: 48px;
+        color: $white;
+        @media (max-width:812px) {
+            text-align: center;
+        }
+    }
+    &-list {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width:812px) {
+            flex-direction: column;
+        }
+        &_column{
+            flex-direction: column;
+            .projects-item{
+                width: 100%;
+            }
+        }
+    }
+    &-item {
+        width: 45%;
+        @media (max-width: 812px) {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        display: flex;
+        margin-bottom: 48px;
+        &_icon {
+            flex: 0 0 72px;
+            height: 72px;
+            width:  72px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            @media (max-width: 812px) {
+                margin-bottom: 16px;
+            }
+        }
+        &_title {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;
+            @media (max-width: 812px) {
+                text-align: center;
+            }
+        }
+        &_text {
+            margin-top: 8px;
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 26px;
+            @media (max-width: 812px) {
+                text-align: center;
+            }
+        }
+    }
+}

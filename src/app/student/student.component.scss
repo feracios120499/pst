@@ -1,0 +1,112 @@
+@import "../../styles.scss";
+#student {
+    margin-top: 164px;
+}
+
+.student {
+    &-title {
+    }
+    &-subtitle {
+        margin-top: 27px;
+        max-width: 365.9px;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 160%;
+
+        color: $black;
+    }
+}
+#spec {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.spec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    // width: 560px;
+    // // height: 250px;
+    @media (max-width: 812px) {
+        width: 100%;
+        height: auto;
+        margin-top: 42px;
+    }
+    &-title {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 32px;
+        color: $white;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &-text {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 160%;
+        opacity: 0;
+        transition: all 0.7s;
+        position: absolute;
+        top: 66%;
+        transform: translateY(-50%);
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+        @media (max-width: 812px) {
+            opacity: 1;
+        }
+    }
+    &-image {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        flex: 1 0 300px;
+        height: 100vh;
+        & > img:not(.gray) {
+            transition: all 0.7s;
+            transform: scale(1.02);
+            filter: brightness(0.6);
+            height: 100%;
+        }
+        & > img.gray {
+            -webkit-filter: grayscale(99%);
+            filter: grayscale(99%);
+            transition: all 0.7s;
+            transform: scale(1.02);
+            height: 100%;
+        }
+        &:hover {
+            & > img:not(.gray) {
+                filter: brightness(0.75);
+                transform: scale(1.1);
+            }
+            & > img.gray {
+                -webkit-filter: grayscale(0%);
+                filter: grayscale(0%);
+                transform: scale(1.1);
+            }
+            & > .spec-text {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.openModal .student-title {
+    transition: color 450ms ease-out;
+    color: $white;
+}
+.openModal .student-subtitle {
+    transition: color 450ms ease-out;
+    color: $white;
+}

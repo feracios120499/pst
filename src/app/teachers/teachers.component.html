@@ -1,0 +1,90 @@
+<app-header></app-header>
+<section id="teachers" [class.openModal]="isShowModal">
+    <div class="container">
+        <div class="teachers-header">
+            <div class="teachers-title title">
+                Cпівробітники
+            </div>
+            <div class="teachers-subtitles">
+                <div class="teachers-subtitles-item">
+                    Ціль наших викладачів кафедри навчити студентів розв’язувати задачі з написання програмного і
+                    мікропрограмного забезпечення
+                </div>
+                <div class="teachers-subtitles-item">
+                    Ми викладачі завжди готові підтримати твою ініціативу та допомогти у вирішенні складних завдань
+                </div>
+            </div>
+        </div>
+        <div class="laureats">
+            <div class="laureats-title title">Лауреати Державної премії України в галузі науки і техніки</div>
+            
+            <div class="teachers">
+                <div class="teachers-teacher" *ngFor="let teacher of laureats" (click)="showModal(teacher)">
+                    <div class="teachers-teacher-image">
+                        <img [src]="'https://amezdwnzfp.cloudimg.io/v7/' + teacher.Image">
+                        <div class="teachers-teacher-background">
+                        </div>
+                    </div>
+                    <div class="teachers-teacher-name">
+                        <div class="teachers-teacher-firstName">
+                            {{teacher.FirstName}}
+                        </div>
+                        {{teacher.NotFirstName}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="teachers">
+            <div class="teachers-teacher" *ngFor="let teacher of teachers" (click)="showModal(teacher)">
+                <div class="teachers-teacher-image">
+                    <img [src]="'https://amezdwnzfp.cloudimg.io/v7/' + teacher.Image">
+                    <div class="teachers-teacher-background">
+                    </div>
+                </div>
+                <div class="teachers-teacher-name">
+                    <div class="teachers-teacher-firstName">
+                        {{teacher.FirstName}}
+                    </div>
+                    {{teacher.NotFirstName}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<div add-class="noscroll" to="body" id="myModal" class="modal-modal simplebar-content-wrapper" [style.display]="isShowModal?'block':'none'" *ngIf="isShowModal">
+    <div class="modal-modal-content">
+        <div class="modal-modal-header">
+            <div class="modal-modal-name">
+                <div class="modal-modal-firstName">
+                    {{currentTeacher.FirstName}}
+                </div>
+                {{currentTeacher.NotFirstName}}
+            </div>
+            <div class="modal-modal-close" (click)="closeModal()">
+                Закрити
+                <i-feather name="x"></i-feather>
+            </div>
+        </div>
+        <div class="modal-modal-general">
+            <div class="modal-modal-image">
+                <img [src]="'https://amezdwnzfp.cloudimg.io/v7/' + currentTeacher.Image" [alt]="currentTeacher.Name">
+                <div class="modal-modal-image-background"></div>
+            </div>
+            <div class="modal-modal-general-content">
+                <div class="modal-modal-general-content-name">
+                    <div class="modal-modal-general-content-firstName">{{currentTeacher.FirstName}}</div>
+                    {{currentTeacher.NotFirstName}}
+                </div>
+            </div>
+        </div>
+        <div class="modal-modal-body">
+            <div class="modal-detail" *ngFor="let detail of currentTeacher.Details">
+                <div class="modal-detail-title">{{detail.Title}}</div>
+                <div class="modal-detail-text" [innerHTML]="detail.Text"></div>
+            </div>
+        </div>
+    </div>
+</div>

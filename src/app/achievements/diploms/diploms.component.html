@@ -1,0 +1,15 @@
+<section id="diploms">
+    <div class="diploms-title title">
+        Наші нагороди
+    </div>
+    <div class="diploms">
+        <swiper [navigation]="true" style="height: 100%;" [pagination]="{ clickable: true }" [slidesPerView]="'5'" class="swiper-primary"
+            [spaceBetween]="10">
+            <ng-template swiperSlide *ngFor="let image of images">
+                <img [src]="image" style="height: 333px;     max-width: 333px;
+                object-fit: contain;">
+            </ng-template>
+        </swiper>
+    </div>
+
+</section>

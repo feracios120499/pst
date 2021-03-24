@@ -1,0 +1,173 @@
+@import "../../colors.scss";
+#documents {
+    margin-top: 164px;
+}
+
+.documents {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &-left {
+        width: 100%;
+        text-align: center;
+    }
+    &-right {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 812px) {
+            flex-direction: column;
+        }
+    }
+    &-title {
+    }
+    &-subtitle {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 160%;
+
+        color: $black;
+    }
+    &-text {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 160%;
+        margin-top: 19px;
+    }
+    &-br {
+        margin-top: 42px;
+    }
+
+    &-backalvr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 49%;
+        @media (max-width: 812px) {
+            width: 100%;
+            height: auto;
+            margin-top: 42px;
+        }
+        &-title {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 48px;
+            color: $white;
+            position: absolute;
+            top: 35%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+        }
+        &-text {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 160%;
+            opacity: 0;
+            transition: all 0.7s;
+            position: absolute;
+            top: 75%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            color: $white;
+
+            @media (max-width: 812px) {
+                opacity: 1;
+            }
+        }
+        &-image {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            & > img {
+                transition: all 0.7s;
+                filter: brightness(0.6);
+            }
+            &:hover {
+                & > img {
+                    filter: brightness(0.75);
+                    transform: scale(1.1);
+                }
+                & > .documents-backalvr-text {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-magistr {
+        margin-left: 20px;
+        @media (max-width: 812px) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 49%;
+        @media (max-width: 812px) {
+            width: 100%;
+            height: auto;
+        }
+        &-title {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 48px;
+            color: $white;
+            position: absolute;
+            top: 35%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+        }
+        &-text {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 160%;
+            opacity: 0;
+            transition: all 0.7s;
+            position: absolute;
+            top: 75%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            color: $white;
+            @media (max-width: 812px) {
+                opacity: 1;
+            }
+        }
+        &-image {
+
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            & > img {
+                transition: all 0.7s;
+                filter: brightness(0.6);
+            }
+            &:hover {
+                & > img {
+                    filter: brightness(0.75);
+                    transform: scale(1.1);
+                }
+                & > .documents-magistr-text {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

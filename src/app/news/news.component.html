@@ -1,0 +1,78 @@
+<app-header></app-header>
+<section id="news">
+    <div class="container">
+        <div class="news-title title">
+            НОВИНИ
+            <div class="news-subtitle">
+                Читайте новини та будьте першими в курсі усіх подій та заходів на нашій кафедрі
+            </div>
+        </div>
+        <div class="news-list">
+            <div class="row" [appScroll]="'_active'">
+                <div class="news-item col-md-4 col-xs-12" *ngFor="let item of newsList" [appScroll]="'_active'"
+                    (click)="showModal(item)">
+                    <div class="news-item-image"><img src="https://amezdwnzfp.cloudimg.io/v7/{{item.Image}}"></div>
+                    <div class="news-item-subject">{{item.Date | date:'dd.MM.yyyy'}}</div>
+                    <div class="news-item-title">{{item.Title}}</div>
+                </div>
+            </div>
+            <div class="news-more" *ngIf="haveMore" (click)="loadMore()">
+                <i-feather name="chevrons-down"></i-feather>
+                БІЛЬШЕ НОВИН
+            </div>
+        </div>
+    </div>
+</section>
+<div add-class="noscroll" to="body" id="abitModal" class="modal-modal simplebar-content-wrapper"
+    [class.show]="isShowModal" *ngIf="isShowModal">
+    <div class="modal-modal-content">
+        <div class="modal-modal-header">
+            <div class="modal-modal-name">
+                <div class="modal-modal-title">
+                    Новина
+                </div>
+            </div>
+            <div class="modal-modal-close" (click)="closeModal()">
+                Закрити
+                <i-feather name="x"></i-feather>
+            </div>
+        </div>
+        <div class="modal-modal-general">
+            <div class="modal-modal-image">
+                <img *ngIf="currentNews.Image" [src]="currentNews.Image" style="object-fit: cover;">
+                <img *ngIf="!currentNews.Image" src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fnews.png?alt=media&token=b5d474b2-6d2f-439e-8184-4ec98b4799b3" style="object-fit: cover;">
+            </div>
+            <div class="modal-modal-general-content">
+                <div class="modal-modal-general-content-subtitle">
+                    <div class="modal-modal-general-content-title">Новина</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-modal-body">
+            <div class="modal-detail">
+                <div>
+                    <div class="modal-detail-name" style="text-align: center;">{{currentNews.Title}}</div>
+                    <div class="modal-detail-html" style="margin-top: 20px;" [innerHTML]="currentNews.Text"></div>
+                </div>
+
+            </div>
+            <div class="modal-documents" *ngIf="currentNews.Documents && currentNews.Documents.length!=0">
+                <div class="modal-detail-name" style="text-align: center;">Документи новини</div>
+                <div class="modal-documents_item" *ngFor="let document of currentNews.Documents">
+                    <div class="modal-documents_name">{{document.FileName}}</div>
+                    <div class="modal-documents_actions">
+                        <div class="button" (click)="downloadDocument(document)">
+                            <i-feather name="download"></i-feather>
+                            Завантажити
+                        </div>
+                        <a class="button-border" [href]="document.FileUrl" target="_blank">
+                            <i-feather name="eye"></i-feather>
+                            Продивитись
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,315 @@
+<div id="app">
+    <app-header></app-header>
+    <header class="header" id="header">
+        <div class="header-left"></div>
+        <div class="header-right"></div>
+        <div class="header-content">
+            <div class="header-title" [appScroll]="'_active'">Запрограмуй <span class="white">майбутнє</span></div>
+            <div class="header-about" [appScroll]="'_active'" (click)="scrollTo('about')">
+                <i-feather name="chevron-down" class="header-about-icon"></i-feather>
+                <div class="header-about-text">Про нас</div>
+            </div>
+        </div>
+        <div class="header-image" [appScroll]="'_active'">
+            <div class="header-prior">
+                <div class="header-prior-our" [appScroll]="'_active'">Наші пріоритети</div>
+                <div class="header-prior-your" [appScroll]="'_active'">Твої можливості</div>
+            </div>
+            <div class="header-bank" [appScroll]="'_active'">
+                Зроби найвигідніший вклад у своєму житті - не в банк,<br>
+                а в майбутнє разом з ІНЖЕНЕРІЄЮ ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ!
+            </div>
+            <div class="header-mobile">
+                <div class="header-mobilePrior">
+                    <div>Наші пріоритети</div>
+                    <div class="white">Твої можливості</div>
+                </div>
+                <div class="header-mobileTitle">
+                    <div>
+                        Запрограмуй <span class="white">майбутнє</span>
+                    </div>
+                    <div class="header-mobileBank">
+                        Зроби найвигідніший вклад у своєму житті - не в банк,
+                        а в майбутнє разом з ІНЖЕНЕРІЄЮ ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ!
+                    </div>
+                </div>
+                <div class="header-mobileAbout" (click)="scrollTo('about')">
+                    <i-feather name="chevron-down" class="header-mobileAbout-icon"></i-feather>
+                    <div class="header-mobileAbout-text">Про нас</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="news">
+        <div class="container">
+            <div class="news">
+                <div class="news-header">
+                    <div class="news-title title">
+                        Новини кафедри
+                    </div>
+                    <div class="news-all" (click)="toRoute('news')">
+                        <div class="news-all-text">
+                            переглянути всі
+                        </div>
+                        <i-feather name="chevron-right" class="news-all-icon"></i-feather>
+                    </div>
+
+                </div>
+                <div class="news-content">
+                    <div class="row" [appScroll]="'_active'">
+                        <div class="news-new col-md-4 col-xs-12" *ngFor="let item of news" [appScroll]="'_active'"
+                            (click)="showNews(item)">
+                            <div class="news-new-image"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fnews.png?alt=media&token=b5d474b2-6d2f-439e-8184-4ec98b4799b3"></div>
+                            <div class="news-new-subject">{{item.Date | date:'dd.MM.yyyy'}}</div>
+                            <div class="news-new-title">{{item.Title}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="prior">
+        <div class="prior">
+            <div class="prior-left"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fcircle.png?alt=media&token=c63bc259-0619-47f7-a541-9ea267647101" /></div>
+            <div class="prior-right">
+                <div class="prior-text">Ваш пріоритет в програмуванні</div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="about">
+                <div class="about-title title">про нас</div>
+                <div class="about-text typewriter">Наша кафедра – єдина кафедра, яка має такий унікальний підбір
+                    викладачів, що
+                    створює потужну тріаду: Комп’ютер-Програма-Технологія. Для наших студентів ми пропонуємо
+                    унікальний
+                    підбір дисциплін. Такий вибір забезпечить професійну підготовку наших студентів і комфортне
+                    входження в ІТ індустрію. Також студенти зможуть успішно працювати у стилі free.</div>
+                <div class="about-button button" (click)="scrollTo('contact','start')">Звязатись з нами</div>
+            </div>
+        </div>
+    </section>
+    <section id="learn" style="position: relative!important;">
+        <div class="learn">
+            <div class="container">
+                <div class="learn-content">
+                    <div class="learn-title title">
+                        Чому ви навчитесь
+                    </div>
+                    <div class="learn-items">
+                        <div class="learn-item">
+                            <div class="learn-number">01</div>
+                            <div class="learn-value">Розробляти системи підтримки прийняття рішень.</div>
+                        </div>
+                        <div class="learn-item">
+                            <div class="learn-number">02</div>
+                            <div class="learn-value">Здійснювати системний аналіз взаємопов’язаних процесів </div>
+                        </div>
+                        <div class="learn-item">
+                            <div class="learn-number">03</div>
+                            <div class="learn-value">Розробляти бази даних та бази знань, проектувати логічну та
+                                фізичну
+                                структуру </div>
+                        </div>
+                        <div class="learn-item">
+                            <div class="learn-number">04</div>
+                            <div class="learn-value">Розробляти математичні моделі складних процесів.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <section id="abit">
+        <div class="abit">
+            <div class="container">
+                <div class="abit-title title">
+                    Для абітурієнтів
+                </div>
+                <div class="abit-text">
+                    Стати студентом гарного ВНЗ може бути найяскравішим досвідом в житті молодої людини. Навчання в
+                    університеті - матеріальна інвестиція в себе, а щоб наситити студентське життя цікавими подіями
+                    та
+                    пригодами, потрібно правильно вибрати не тільки майбутню професію, а й заклад вищої освіти.
+                </div>
+            </div>
+            <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fabit.png?alt=media&token=87f181d3-958d-4256-ba75-f8956e400c27" class="abit-image" />
+        </div>
+    </section>
+    <section id="why" class="why">
+        <div class="why-ellipse1"></div>
+        <div class="why-ellipse2"></div>
+        <div class="container">
+
+            <div class="why-title title">Чому саме наша кафедра ?</div>
+            <div class="why-items">
+                <div class="why-item">
+                    <div class="why-image"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fwhy-1.png?alt=media&token=787b5fd7-7f91-46bc-aaaf-49a7181cea7e"></div>
+                    <div class="why-text">Ми навчаємо за унікальніими авторськими програмами</div>
+                </div>
+                <div class="why-item">
+                    <div class="why-image"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fwhy-2.png?alt=media&token=1f74549f-b425-49f0-b9d0-11a74ecdeb69"></div>
+                    <div class="why-text">Готуємо спецалістів за міжнародними стандартами</div>
+                </div>
+                <div class="why-item">
+                    <div class="why-image"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fwhy-3.png?alt=media&token=ff1ed014-f622-425d-8c77-9e9693138f78"></div>
+                    <div class="why-text">Надаємо сучасну матеріально-технічну базу для навчання</div>
+                </div>
+                <div class="why-item">
+                    <div class="why-image"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fwhy-4.png?alt=media&token=dbb19c2d-bde3-46dc-853e-c2e2c1f8346e"></div>
+                    <div class="why-text">Студенти можуть командою розвивати свої власні проекти</div>
+                </div>
+                <div class="why-item">
+                    <div class="why-image"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fwhy-5.png?alt=media&token=16339954-3128-493f-86b8-6f683a225c20"></div>
+                    <div class="why-text">Інтегруємо в навчання майстер-класи, курси, тренінги та хакатони</div>
+                </div>
+                <div class="why-item">
+                    <div class="why-image"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fwhy-6.png?alt=media&token=11ea330b-dafe-4cf8-a5d1-df7c5d2e3e09"></div>
+                    <div class="why-text">Наші програми дисциплін - унікальні авторські методики, що мають високу
+                        оцінку
+                        ІТ-індустрії</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="questions" style="padding: 0!important;">
+        <div class="questions">
+            <!-- <div class="questions-image"></div> -->
+            <div class="questions-content">
+                <div class="questions-title title">
+                    Часті запитання
+                </div>
+                <div class="questions-items">
+                    <div class="questions-item" (click)="showQue(0)">Яку вибрати професію? На що варто звернути увагу,
+                        визначаючись з
+                        професією?<span class="questions-more">Дізнатись</span></div>
+                    <div class="questions-item" (click)="showQue(1)">Який обрати університет? На що варто звернути
+                        увагу?<span class="questions-more">Дізнатись</span></div>
+                    <div class="questions-item" (click)="showQue(2)">Як правильно обрати освітню програму або
+                        спеціальність?<span class="questions-more">Дізнатись</span></div>
+                    <div class="questions-item" (click)="showQue(3)">Які можливості мають студенти кафедри програмних
+                        систем і
+                        технологій?<span class="questions-more">Дізнатись</span>
+                    </div>
+                </div>
+                <div class="questions-button button" (click)="toRoute('applicant')">
+                    Дізнатись більше
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="partners" class="partners">
+        <div class="container">
+            <div class="partners-title title">наші партнери</div>
+            <div class="partners-items row">
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F1.png?alt=media&token=2cfe6395-2d32-4c1f-ad10-25dc587a52d1"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F2.png?alt=media&token=db854f86-f876-4258-b0f9-c21f3319689b"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F3.png?alt=media&token=26f25b00-6925-430a-b8b8-31b8f90545a9"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F4.png?alt=media&token=052fedb9-e885-44f4-886d-700c2d479749"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F5.png?alt=media&token=3824aecb-a475-4d85-b834-c467329dec23"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F6.png?alt=media&token=dd5ed6f9-c878-450a-aaf0-ccfbda0615c9"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F7.png?alt=media&token=2e003ace-de95-4378-af2e-a507f8c18452"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F8.png?alt=media&token=9f90d717-c49e-42e2-bcec-3ac062650a53"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F9.png?alt=media&token=a275e551-5405-44d8-9d9e-0549325f8e52"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F10.png?alt=media&token=de550f06-c522-4ea5-8fe4-936cf654d003"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F11.png?alt=media&token=fd46a20c-75aa-4a94-80da-041687295df4"></div>
+                <div class="partners-item col-lg-2 col-md-3"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fclients%2F12.png?alt=media&token=d124c621-df65-4f9a-b7f6-9bb9ab0e73a4"></div>
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</div>
+<div add-class="noscroll" to="body" id="abitModal" class="modal-modal simplebar-content-wrapper"
+    [class.show]="currentModal == 'news'" *ngIf="currentModal == 'news'">
+    <div class="modal-modal-content">
+        <div class="modal-modal-header">
+            <div class="modal-modal-name">
+                <div class="modal-modal-title">
+                    Новина
+                </div>
+            </div>
+            <div class="modal-modal-close" (click)="closeModal()">
+                Закрити
+                <i-feather name="x"></i-feather>
+            </div>
+        </div>
+        <div class="modal-modal-general">
+            <div class="modal-modal-image">
+                <img *ngIf="currentNews.Image" [src]="currentNews.Image" style="object-fit: cover;">
+                <img *ngIf="!currentNews.Image" src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fnews.png?alt=media&token=b5d474b2-6d2f-439e-8184-4ec98b4799b3" style="object-fit: cover;">
+            </div>
+            <div class="modal-modal-general-content">
+                <div class="modal-modal-general-content-subtitle">
+                    <div class="modal-modal-general-content-title">Новина</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-modal-body">
+            <div class="modal-detail">
+                <div>
+                    <div class="modal-detail-name" style="text-align: center;">{{currentNews.Title}}</div>
+                    <div class="modal-detail-html" style="margin-top: 20px;" [innerHTML]="currentNews.Text"></div>
+                </div>
+
+            </div>
+            <div class="modal-documents" *ngIf="currentNews.Documents && currentNews.Documents.length!=0">
+                <div class="modal-detail-name" style="text-align: center;">Документи новини</div>
+                <div class="modal-documents_item" *ngFor="let document of currentNews.Documents">
+                    <div class="modal-documents_name">{{document.FileName}}</div>
+                    <div class="modal-documents_actions">
+                        <div class="button" (click)="downloadDocument(document)">
+                            <i-feather name="download"></i-feather>
+                            Завантажити
+                        </div>
+                        <a class="button-border" [href]="document.FileUrl" target="_blank">
+                            <i-feather name="eye"></i-feather>
+                            Продивитись
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div add-class="noscroll" to="body" id="abitModal" class="modal-modal simplebar-content-wrapper"
+    [class.show]="currentModal == 'abitModal'" *ngIf="currentModal == 'abitModal'">
+    <div class="modal-modal-content">
+        <div class="modal-modal-header">
+            <div class="modal-modal-name">
+                <div class="modal-modal-title">
+                    Часті запитання
+                </div>
+                {{currentQue.title}}
+            </div>
+            <div class="modal-modal-close" (click)="closeModal()">
+                Закрити
+                <i-feather name="x"></i-feather>
+            </div>
+        </div>
+        <div class="modal-modal-general">
+            <div class="modal-modal-image">
+                <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fquestions.png?alt=media&token=9f8cbb47-1fc9-4dc4-9c9c-3785f70aaaa9" style="object-fit: cover;">
+            </div>
+            <div class="modal-modal-general-content">
+                <div class="modal-modal-general-content-subtitle">
+                    <div class="modal-modal-general-content-title">Для абітурієнта</div>
+                    {{currentQue.title}}
+                </div>
+            </div>
+        </div>
+        <div class="modal-modal-body">
+            <div class="modal-detail">
+                <div class="modal-detail-html" [innerHTML]="currentQue.text"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    feather.replace()
+</script>

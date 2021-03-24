@@ -1,0 +1,124 @@
+@import "../../colors.scss";
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-menu {
+    background-color: $black !important;
+    top: 10px !important;
+}
+.dropdown-item {
+    color: $white !important;
+    &:hover {
+        background-color: $black !important;
+        color: $yellow !important;
+    }
+}
+
+.nav {
+    height: 80px;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $black;
+    z-index: 105;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-brand {
+        display: flex;
+        align-items: center;
+        color: $yellow;
+        margin-left: 8.821233411397346%;
+        cursor: pointer;
+        width: 10%;
+    }
+    &-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: calc(100% - (8.821233411397346% + 400px + 51%));
+        width: calc(100% - 20% - (100% - (8.821233411397346% + 400px + 51%)));
+        @media (max-width: 812px) {
+            display: none;
+        }
+    }
+    &-group {
+        display: flex;
+        align-items: center;
+    }
+    &-item {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin-left: 29px;
+        color: $white;
+        transition: color 0.6s;
+        &:hover,
+        &.active {
+            cursor: pointer;
+            color: $yellow;
+        }
+        & a {
+            color: $white;
+            transition: color 0.6s;
+            text-decoration: none;
+            &:hover {
+                cursor: pointer;
+                color: $yellow;
+                text-decoration: none;
+            }
+        }
+    }
+    &-mobile {
+        display: none;
+        @media (max-width: 812px) {
+            display: flex;
+            margin-right: 8.821233411397346%;
+        }
+    }
+    &-dropdown {
+        display: none;
+        &.show {
+            display: flex;
+            flex-direction: column;
+
+            position: absolute;
+            left: 0;
+            top: 80px;
+            height: calc(100vh - 80px);
+            background-color: #2d2c2c;
+            width: 100%;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+            height: 40px;
+            width: 100%;
+            color: $white;
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+}
+
+.dropdown-item.active {
+    cursor: pointer;
+    color: $yellow !important;
+    background-color: transparent;
+}
+.nav-dropdown-item.active{
+    cursor: pointer;
+    color: $yellow !important;
+    background-color: transparent;
+}
+.nav-dropdown-item{
+    text-transform: uppercase;
+}

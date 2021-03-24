@@ -1,0 +1,59 @@
+<nav class="nav">
+    <div class="nav-brand" href="index.html" (click)="toRoute('')" [class.active]="isActive('teachers')">
+        <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Flogo.png?alt=media&token=be5d1700-4c4c-49ae-a8e0-7f182fd9aec5">
+    </div>
+    <div class="nav-items">
+        <div class="nav-group">
+            <div class="nav-item" (click)="toRoute('student')" [class.active]="isActive('student')">
+                студенту
+            </div>
+            <div class="nav-item" (click)="toRoute('applicant')" [class.active]="isActive('applicant')">
+                Абітурієнту
+            </div>
+        </div>
+        <div class="nav-group">
+            <div class="nav-item" (click)="toRoute('teachers')" [class.active]="isActive('teachers')">співробітники
+            </div>
+            <div class="nav-item" (click)="toRoute('news')" [class.active]="isActive('news')">Новини</div>
+            <div class="nav-item" (click)="toRoute('documents')" [class.active]="isActive('documents')">Документи</div>
+            <div class="nav-item yellow">
+                <div class="dropdown show">
+                    <a class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i-feather name="more-vertical"></i-feather>
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" (click)="toRoute('achievements')"
+                            [class.active]="isActive('achievements')">Досягнення</a>
+                        <a class="dropdown-item" (click)="toRoute('services')"
+                            [class.active]="isActive('services')">Послуги</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-mobile">
+        <div class="nav-item yellow" (click)="openMenu()">
+            <i-feather name="menu"></i-feather>
+        </div>
+    </div>
+    <div class="nav-dropdown" id="mobileMenu">
+        <div class="nav-dropdown-item" (click)="toRoute('student')" [class.active]="isActive('student')">СТУДЕНТУ </div>
+        <div class="nav-dropdown-item" (click)="toRoute('applicant')" [class.active]="isActive('applicant')">Абітурієнту
+        </div>
+        <div class="nav-dropdown-item" (click)="toRoute('teachers')" [class.active]="isActive('teachers')">співробітники
+        </div>
+        <div class="nav-dropdown-item" (click)="toRoute('news')" [class.active]="isActive('news')">Новини</div>
+        <div class="nav-dropdown-item" (click)="toRoute('documents')" [class.active]="isActive('documents')">Документи
+        </div>
+        <div class="nav-dropdown-item" (click)="toRoute('achievements')" [class.active]="isActive('achievements')">
+            Досягнення</div>
+        <div class="nav-dropdown-item" (click)="toRoute('services')" [class.active]="isActive('services')">Послуги</div>
+
+    </div>
+</nav>
+<script>
+    feather.replace();
+</script>
