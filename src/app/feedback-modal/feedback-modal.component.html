@@ -1,0 +1,47 @@
+<div class="feedback">
+    <div class="form-check" *ngIf="!loginByGoogle">
+        <label class="form-check-label">
+            <input type="checkbox" [(ngModel)]="isAnonym" class="form-check-input"> Залишити відгук анонімно
+        </label>
+    </div>
+    <div class="feedback-auth" *ngIf="!isAnonym && !loginByGoogle">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Ваше ім'я</label>
+            <input type="text" class="form-control" placeholder="Введіть своє ім'я" maxlength="150" [(ngModel)]="feedback.Name">
+        </div>
+        <div class="flex flex-center-center" (click)="googleAuth()">
+            <div class="feedback-button button">
+                Або увійти з Google
+            </div>
+        </div>
+        
+    </div>
+    <div *ngIf="loginByGoogle" class="feedback-google">
+        <img [src]="feedback.Image" class="feedback-google-image" id="image">
+        <span class="feedback-google-name">{{feedback.Name}}</span>
+    </div>
+    <hr>
+    <div class="feedback-stars-container">
+        <div class="feedback-stars">
+            <ngb-rating [(rate)]="feedback.Stars" [max]="5" style="outline: none;">
+                <ng-template let-fill="fill" let-index="index">
+                    <span class="star" [class.filled]="fill === 100" *ngIf="fill === 100">&#9733;</span>
+                    <span class="star" *ngIf="fill !== 100">☆</span>
+    
+                </ng-template>
+            </ngb-rating>
+        </div>
+    </div>
+
+    <div class="feedback-text">
+        <div class="input-group">
+            <textarea class="form-control" placeholder="Текст відгуку" maxlength="150px" [(ngModel)]="feedback.Text"></textarea>
+        </div>
+    </div>
+    <hr>
+    <div class="flex flex-center-center">
+        <div class="feedback-button button" (click)="saveFeedback()">
+            Залишити відгук
+        </div>
+    </div>
+</div>

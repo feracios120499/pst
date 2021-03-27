@@ -1,0 +1,53 @@
+<app-header></app-header>
+<section id="feedback">
+    <div class="container">
+        <div class="feedback-header">
+            <div class="feedback-title title">
+                КНИГА ВІДГУКІВ
+                <div class="feedback-subtitle">
+                    Чесні та конструктивні відгуки про факультет від наших студентів
+                </div>
+            </div>
+            <div class="feedback-button button" (click)="showModal()">
+                Залишити відгук
+            </div>
+        </div>
+
+        <div class="feedback-list">
+            <div class="feedback-item" *ngFor="let feedback of listFeedback">
+                <div class="feedback-image">
+                    <img src="../../assets/feedback.png">
+                </div>
+                <div class="flex">
+                    <div class="feedback-item_image">
+                        <img src="{{feedback.Image}}" alt="" (error)="onImgError($event)">
+                    </div>
+                    <div>
+                        <div class="feedback-item_name">
+                            {{feedback.Name}}
+                        </div>
+                        <div class="feedback-item_date">
+                            {{feedback.Date | date:'dd.MM.yyyy'}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="feedback-item_text">
+                    {{feedback.Text}}
+                </div>
+                <div class="feedback-stars-container">
+                    <div class="feedback-stars">
+                        <ngb-rating [(rate)]="feedback.Stars" [max]="5" style="outline: none;" [readonly]="true">
+                            <ng-template let-fill="fill" let-index="index">
+                                <span class="star" [class.filled]="fill === 100" *ngIf="fill === 100">&#9733;</span>
+                                <span class="star" *ngIf="fill !== 100">☆</span>
+
+                            </ng-template>
+                        </ngb-rating>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,42 @@
+.feedback {
+    padding: 16px;
+    &-auth {
+        margin-top: 16px;
+    }
+    &-stars {
+        background: rgba(253, 194, 2, 0.1);
+        border-radius: 8px;
+        display: inline-block;
+        padding: 4px 10px;
+        &-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-text {
+        margin-top: 16px;
+    }
+    &-google {
+        display: flex;
+        align-items: center;
+        &-image {
+            border-radius: 50%;
+            width: 50px;
+            object-fit: cover;
+        }
+        &-name {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 160%;
+            margin-left: 16px;
+        }
+    }
+}
+
+.star {
+    color: #fdc202;
+    font-size: 32px;
+}

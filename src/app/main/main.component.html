@@ -59,7 +59,7 @@
                     <div class="row" [appScroll]="'_active'">
                         <div class="news-new col-md-4 col-xs-12" *ngFor="let item of news" [appScroll]="'_active'"
                             (click)="showNews(item)">
-                            <div class="news-new-image"><img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fnews.png?alt=media&token=b5d474b2-6d2f-439e-8184-4ec98b4799b3"></div>
+                            <div class="news-new-image"><img src="https://amezdwnzfp.cloudimg.io/v7/{{item.Image}}"></div>
                             <div class="news-new-subject">{{item.Date | date:'dd.MM.yyyy'}}</div>
                             <div class="news-new-title">{{item.Title}}</div>
                         </div>

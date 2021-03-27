@@ -23,6 +23,13 @@ import { DocumentsComponent } from './documents/documents.component';
 import { AchievementsComponent } from './achievements/achievements.component';
 import { SwiperModule } from 'swiper/angular';
 import { DiplomsComponent } from './achievements/diploms/diploms.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FeedbackModalComponent } from './feedback-modal/feedback-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,15 +47,23 @@ import { DiplomsComponent } from './achievements/diploms/diploms.component';
     NewsComponent,
     DocumentsComponent,
     AchievementsComponent,
-    DiplomsComponent
+    DiplomsComponent,
+    FeedbackComponent,
+    FeedbackModalComponent
   ],
   imports: [
     SwiperModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    FeatherModule.pick(allIcons)
+    ToastrModule.forRoot(),
+    FeatherModule.pick(allIcons),
+    NgbModule,
+    HttpClientModule
   ],
   exports:[
     FeatherModule

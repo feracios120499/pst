@@ -1,6 +1,7 @@
 <nav class="nav">
     <div class="nav-brand" href="index.html" (click)="toRoute('')" [class.active]="isActive('teachers')">
-        <img src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Flogo.png?alt=media&token=be5d1700-4c4c-49ae-a8e0-7f182fd9aec5">
+        <img
+            src="https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Flogo.png?alt=media&token=be5d1700-4c4c-49ae-a8e0-7f182fd9aec5">
     </div>
     <div class="nav-items">
         <div class="nav-group">
@@ -28,6 +29,8 @@
                             [class.active]="isActive('achievements')">Досягнення</a>
                         <a class="dropdown-item" (click)="toRoute('services')"
                             [class.active]="isActive('services')">Послуги</a>
+                        <a class="dropdown-item" (click)="toRoute('feedback')"
+                            [class.active]="isActive('feedback')">Книга відгуків</a>
                     </div>
                 </div>
 
@@ -50,6 +53,7 @@
         </div>
         <div class="nav-dropdown-item" (click)="toRoute('achievements')" [class.active]="isActive('achievements')">
             Досягнення</div>
+        <div class="nav-dropdown-item" (click)="toRoute('feedback')" [class.active]="isActive('feedback')">Книга відгуків</div>
         <div class="nav-dropdown-item" (click)="toRoute('services')" [class.active]="isActive('services')">Послуги</div>
 
     </div>

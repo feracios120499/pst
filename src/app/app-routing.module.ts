@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AchievementsComponent } from './achievements/achievements.component';
 import { ApplicantComponent } from './applicant/applicant.component';
 import { DocumentsComponent } from './documents/documents.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 import { MainComponent } from './main/main.component';
 import { NewsComponent } from './news/news.component';
 import { ServicesComponent } from './services/services.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'news', component: NewsComponent },
   { path: 'documents', component: DocumentsComponent },
-  { path: 'achievements', component: AchievementsComponent }
+  { path: 'achievements', component: AchievementsComponent },
+  { path: 'feedback', component: FeedbackComponent }
 ];
 
 @NgModule({

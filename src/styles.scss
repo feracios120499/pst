@@ -64,6 +64,13 @@ body.openModal {
         display: none;
     }
 }
+.flex{
+    display: flex;
+}
+.flex-center-center{
+    justify-content: center;
+    align-items: center;
+}
 .modal {
     /* The Modal (background) */
     &-modal {
@@ -371,3 +378,6 @@ footer {
     transition: color 450ms ease-out;
     color: $white !important;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
