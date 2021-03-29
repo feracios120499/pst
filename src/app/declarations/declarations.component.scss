@@ -1,0 +1,52 @@
+@import "../../styles.scss";
+#declaration {
+    margin-top: 164px;
+}
+
+.declaration {
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 812px) {
+            flex-direction: column;
+        }
+    }
+    &-button {
+        @media (max-width: 812px) {
+            margin-top: 16px;
+        }
+    }
+    &-title {
+    }
+    &-subtitle {
+        margin-top: 27px;
+        max-width: 365.9px;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 160%;
+
+        color: $black;
+    }
+    &-list {
+        margin-top: 80px;
+    }
+    &-item {
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid $yellow;
+        padding: 24px;
+        margin-bottom: 24px;
+        &-title {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 160%;
+
+            color: $black;
+        }
+    }
+}

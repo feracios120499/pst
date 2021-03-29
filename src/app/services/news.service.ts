@@ -13,14 +13,14 @@ export class NewsService {
 
 
     getLastNews(count: number) {
-        return this.db.list('news/', ref =>ref.orderByChild('Date').limitToLast(count)).valueChanges().pipe(map((item) => {
-            return item.reverse();
+        return this.db.list<any>('news/', ref => ref.orderByChild('Date').limitToLast(count)).valueChanges().pipe(map((item) => {
+            return item.reverse().filter(p => !p.IsDeclaration);
         }));
     }
 
     getMoreNews(count: number, page: number) {
-        return this.db.list('news/', ref => ref.orderByChild('Date').limitToLast(count * page)).valueChanges().pipe(map((item) => {
-            return item.reverse();
+        return this.db.list<any>('news/', ref => ref.orderByChild('Date').limitToLast(count * page)).valueChanges().pipe(map((item) => {
+            return item.reverse().filter(p => !p.IsDeclaration);
         }));
     }
 }

@@ -30,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { DeclarationsComponent } from './declarations/declarations.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { HttpClientModule } from '@angular/common/http';
     AchievementsComponent,
     DiplomsComponent,
     FeedbackComponent,
-    FeedbackModalComponent
+    FeedbackModalComponent,
+    DeclarationsComponent
   ],
   imports: [
     SwiperModule,

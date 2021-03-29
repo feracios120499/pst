@@ -1,0 +1,47 @@
+<app-header></app-header>
+<section id="declaration">
+    <div class="container">
+        <div class="declaration-header">
+            <div class="declaration-title title">
+                ОГОЛОШЕННЯ
+                <div class="declaration-subtitle">
+                    Головні оголошення кафедри
+                </div>
+            </div>
+        </div>
+        <div class="declaration-list">
+            <div class="declaration-item" *ngFor="let declaration of declarations">
+                <div class="declaration-item-body">
+                    <div>{{declaration.Date | date:'dd.MM.yyyy'}}</div>
+                    <div class="declaration-item-title">
+                        {{declaration.Title}}
+                    </div>
+                    <div class="declaration-item-text" [innerHTML]="declaration.Text">
+                    </div>
+                    <div class="modal-documents" *ngIf="declaration.Documents && declaration.Documents.length!=0">
+                        <div class="modal-detail-name" style="text-align: center;">Документи оголошення</div>
+                        <div class="modal-documents_item" *ngFor="let document of declaration.Documents">
+                            <div class="modal-documents_name">{{document.FileName}}</div>
+                            <div class="modal-documents_actions">
+                                <div class="button" (click)="downloadDocument(document)">
+                                    <i-feather name="download"></i-feather>
+                                    Завантажити
+                                </div>
+                                <a class="button-border" [href]="document.FileUrl" target="_blank">
+                                    <i-feather name="eye"></i-feather>
+                                    Продивитись
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="declaration-item-images">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

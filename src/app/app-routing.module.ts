@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AchievementsComponent } from './achievements/achievements.component';
 import { ApplicantComponent } from './applicant/applicant.component';
+import { DeclarationsComponent } from './declarations/declarations.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { MainComponent } from './main/main.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent },
   { path: 'documents', component: DocumentsComponent },
   { path: 'achievements', component: AchievementsComponent },
-  { path: 'feedback', component: FeedbackComponent }
+  { path: 'feedback', component: FeedbackComponent },
+  { path: 'declarations', component: DeclarationsComponent }
 ];
 
 @NgModule({
