@@ -11,11 +11,12 @@ export class StudentComponent implements OnInit {
 
   ngOnInit(): void {
   }
-   
+
   specializations = [
     {
-      image:'https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F1.png?alt=media&token=ec05ea6d-8dd3-4364-a2e7-bcbb412d63d9',
-      title:'Програмно-інформаційні системи',
+      image: 'https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F1.png?alt=media&token=ec05ea6d-8dd3-4364-a2e7-bcbb412d63d9',
+      title: 'Програмно-інформаційні системи',
+      subtitle: 'Вибірковий блок 1',
       knowledge: [
         "основ алгоритмізації й програмування;",
         "об’єктно-орієнтованого й функціонального програмування;",
@@ -49,40 +50,44 @@ export class StudentComponent implements OnInit {
       ]
     },
     {
-      image:'https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F2.png?alt=media&token=1d542dc0-53aa-4289-9e9d-6750aa3e94d1',
-      title:'Теорія інформаційних систем',
+      image: 'https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F2.png?alt=media&token=1d542dc0-53aa-4289-9e9d-6750aa3e94d1',
+      title: 'Програмні системи даталогії',
+      subtitle: 'Вибірковий блок 2',
       knowledge: [
-        "формальних мов програмування;",
-        "з використання парадигм програмування;",
+        "основ алгоритмізації й програмування;",
         "методів збору й оброблення інформації;",
-        "специфікацій програмного забезпечення."
+        "методів класифікації, прогнозування, кластерного аналізу, пошуку асоціативних правил;",
+        "технологій створення моделей машинного навчання;",
+        "технологій розроблення та проектування програмного забезпечення для систем інтелектуального аналізу даних;",
+        "основних галузей практичного застосування даталогії."
       ],
       allow: [
-        "використовувати отримані знання в будь-якій галузі господарства;",
-        "займатися теорією програмного забезпечення;",
-        "розробляти нові парадигми програмування."
+        "використовувати отримані знання в будь-якій галузі;",
+        "розробляти нові моделі машинного навчання;",
+        "використовувати програмні засоби машинного навчання і аналізу даних в процесі розробки програмного забезпечення."
       ],
       know: [
         "Математику",
         "Основи програмування",
-        "Об’єктно-орієнтоване програмування Архітектуру ЕОМ",
-        "Специфікацію програмного забезпечення"
+        "Об’єктно-орієнтоване програмування",
+        "Англійську мову (дуже бажано)"
       ],
       subjects: [
-        "Мовні процесори",
-        "Парадигми програмування",
-        "Інформаційна безпека",
-        "Українська мова (за професійним спрямуванням)",
-        "Економіка програмного забезпечення",
-        "Вбудовані системи реального часу",
-        "Пакети прикладних програм",
-        "Інтерактивні системи",
-        "Формальні методи специфікації програм"
+        "Технології статистичного аналізу даних",
+        "Збирання, зберігання та оброблення даних",
+        "Алгоритмічні основи інтелектуальних систем",
+        "Паралельне програмування",
+        "Візуалізація даних",
+        "Теорія і технологія блокчейн",
+        "Програмні засоби машинного навчання і аналізу даних",
+        "Математичні і програмні технології аналізу даних",
+        "Маркетингова аналітика та аналіз даних"
       ]
     },
     {
-      image:'https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F3.png?alt=media&token=4db780d1-5c63-4dcc-ae37-37bddf2958ca',
-      title:'Програмування вбудованих і мобільних систем (ВМС)',
+      image: 'https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F3.png?alt=media&token=4db780d1-5c63-4dcc-ae37-37bddf2958ca',
+      title: 'Програмування вбудованих і мобільних систем (ВМС)',
+      subtitle: 'Вибірковий блок 3',
       knowledge: [
         "основ алгоритмізації й програмування;",
         "структурної й функціональної організації програмно-апаратних електронних систем і комплексів;",
@@ -125,8 +130,9 @@ export class StudentComponent implements OnInit {
       ]
     },
     {
-      image:'https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F4.png?alt=media&token=4f4ba992-a02b-4632-a7aa-24ba32c254c0',
-      title:'Програмування комп`ютерних ігор',
+      image: 'https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F4.png?alt=media&token=4f4ba992-a02b-4632-a7aa-24ba32c254c0',
+      title: 'Програмування комп`ютерних ігор',
+      subtitle: 'Вибірковий блок 4',
       knowledge: [
         "основ алгоритмізації й програмування;",
         "методів структурної й функціональної організації апаратно-програмних електронних систем і комплексів;",
@@ -163,8 +169,9 @@ export class StudentComponent implements OnInit {
       ]
     },
     {
-      image:'https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F5.png?alt=media&token=38e18243-5b1c-4859-b2e5-9de64d0829b4',
-      title:'ERP програмування',
+      image: 'https://amezdwnzfp.cloudimg.io/v7/https://firebasestorage.googleapis.com/v0/b/ipz-site.appspot.com/o/images%2Fspec%2F5.png?alt=media&token=38e18243-5b1c-4859-b2e5-9de64d0829b4',
+      title: 'ERP програмування',
+      subtitle: 'Вибірковий блок 5',
       knowledge: [
         "основ алгоритмізації й програмування;",
         "методів структурної й функціональної організації автоматизованих систем управління підприємством (Enterprise Resource Planning, ERP-систем);",
@@ -210,14 +217,14 @@ export class StudentComponent implements OnInit {
   currentSpec = this.specializations[0];
   isShowModal = false;
 
-  openModal(index){
+  openModal(index) {
     this.currentSpec = this.specializations[index];
     this.isShowModal = true;
     var body = document.getElementsByTagName('body')[0];
     body.classList.add('openModal');
   }
 
-  closeModal(){
+  closeModal() {
     var body = document.getElementsByTagName('body')[0];
     body.classList.remove('openModal');
     this.isShowModal = false;
