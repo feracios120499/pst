@@ -1,8 +1,24 @@
 @import "../../colors.scss";
 #languages {
+    margin-top: 124px;
+}
+#ipz {
     margin-top: 164px;
 }
+.ipz {
+    &-title {
+    }
+    &-text {
+        margin-top: 27px;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 160%;
 
+        color: $black;
+    }
+}
 .languages {
     &-title {
     }
@@ -107,7 +123,7 @@
         @media (max-width: 812px) {
             width: 100%;
             height: auto;
-            margin-top:42px;
+            margin-top: 42px;
         }
         &-title {
             font-family: Ubuntu;
